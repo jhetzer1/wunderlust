@@ -5,6 +5,8 @@
    License: none (public domain)
 */
 
+@import url("https://fonts.google.com/share?selection.family=Molle:ital@1%7CMontserrat");
+
 html,
 body,
 div,
@@ -130,8 +132,6 @@ table {
   border-spacing: 0;
 }
 
-@import url("https://fonts.google.com/share?selection.family=Molle:ital@1%7CMontserrat");
-
 :root {
   --black: #000000;
   --white: #ffffff;
@@ -210,7 +210,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: left;
+  align-items: start;
   padding: 1rem;
   margin: 0 auto;
 }
@@ -298,11 +298,9 @@ nav {
 }
 
 /* ----- INTRO STYLES ----- */
-#intro {
-  p {
+#intro p {
     font-variation-settings: "wght" 240;
     line-height: 32px;
-  }
 }
 
 /* ----- IMAGE STYLES ----- */
@@ -427,7 +425,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  place-content: left;
+  place-content: start;
   padding-bottom: 1%;
   padding-left: 10%;
   padding-right: 10%;
@@ -552,6 +550,16 @@ footer a {
   flex-direction: column;
 }
 
+/* ----- HOVER STYLES ----- */
+@media (hover:hover){
+  nav a:hover {
+    cursor: pointer;
+  }
+  #plan a:hover {
+    cursor: pointer;
+  }
+}
+
 /* ------- MEDIUM SCREENS ------- */
 @media screen and (min-width: 429px) and (max-width: 769px) {
   header {
@@ -593,7 +601,6 @@ footer a {
 
   #menu-toggle {
     position: relative;
-    top: anchor(bottom);
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
@@ -932,6 +939,18 @@ footer a {
     align-items: center;
     width: 398px;
     height: 336px;
+  }
+
+  #plan section:first-of-type {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  #plan section:last-of-type {
+    display: grid;
+    grid-column-start: 5;
+    grid-column-end: 6;
   }
 
   #plan h4 {
